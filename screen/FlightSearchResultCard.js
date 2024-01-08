@@ -4,6 +4,7 @@ import { Card, Button, Surface } from 'react-native-paper';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import Entypo from '@expo/vector-icons/MaterialCommunityIcons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import CalendarStrip from 'react-native-calendar-strip';
 
 
 const FlightSearchResultCard = (props) => {
@@ -24,7 +25,7 @@ const FlightSearchResultCard = (props) => {
                     <Text>10 Jan 2024</Text>
                 </View>
             </Surface> */}
-           <View style={{ height: 30, flexDirection: 'row', alignItems: 'center', margin: 10, }}>
+            <View style={{ height: 30, flexDirection: 'row', alignItems: 'center', margin: 10, }}>
                 <TouchableOpacity style={{}} onPress={() => { navigation.goBack(null) }}>
 
                     <MaterialIcons name="arrow-back-ios" color={"balck"} size={26} />
@@ -32,9 +33,23 @@ const FlightSearchResultCard = (props) => {
                 <View>
                     <Text>New Delhi to Mumbai</Text>
                     <Text>10 Jan 2024</Text>
-                </View> 
+                </View>
             </View>
             <View style={{ marginTop: 0 }}>
+
+                <CalendarStrip
+                    scrollable
+                    style={{ height: 80, paddingTop: 20, paddingBottom: 10 }}
+                    calendarColor={'#3343CE'}
+                    calendarHeaderStyle={{ color: 'white' }}
+                    dateNumberStyle={{ color: 'white' }}
+                    dateNameStyle={{ color: 'white' }}
+                    iconContainer={{ flex: 0.1 }}
+                    // dayComponent={(e)=>{
+                    //     console.log(e);
+                    //     return <View><Text>{e.date}</Text></View>;
+                    //   }}
+                />
 
                 <Card style={{ marginTop: 10 }}>
                     <Card.Content style={{ backgroundColor: '#FFFFFF' }}>
@@ -240,7 +255,7 @@ const styles = StyleSheet.create({
         width: '99%',
         alignItems: 'center',
         // justifyContent: 'center',
-        backgroundColor:'white',
-        flexDirection:'row'
-      },
+        backgroundColor: 'white',
+        flexDirection: 'row'
+    },
 });

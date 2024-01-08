@@ -20,6 +20,9 @@ const FlightReview = (props) => {
         { label: 'I am willing to risk my trip', value: 'out' },
     ];
 
+    const [email, setEmail] = React.useState("");
+    const [mobile, setMobile] = React.useState("");
+
     return (
         <SafeAreaView style={{ flex: 1 }}>
             <View style={{ height: 30, flexDirection: 'row', alignItems: 'center', margin: 10, }}>
@@ -30,7 +33,7 @@ const FlightReview = (props) => {
                 <View>
                     <Text>Review Booking</Text>
                     {/* <Text>10 Jan 2024 | 10:24 - 12:30</Text> */}
-                </View> 
+                </View>
             </View>
             <KeyboardAwareScrollView>
                 <ScrollView>
@@ -140,7 +143,7 @@ const FlightReview = (props) => {
 
                     {/* Contact Info */}
 
-                    <View style={[styles.card, { height: 290 }]}>
+                    <View style={[styles.card, { height: 330 }]}>
 
                         <View style={{ backgroundColor: '#77EFBD', }}>
                             <View style={{ margin: 15, flexDirection: 'row', alignItems: 'center' }}>
@@ -156,27 +159,45 @@ const FlightReview = (props) => {
 
                         </View>
 
-                        <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: 15, margin: 10 }}>
+                        <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginTop: 15, margin: 5 }}>
                             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
 
-                                <Text style={{ fontSize: 16, fontWeight: 500 }}>Please proved below details</Text>
+                                <Text style={{ fontSize: 16, fontWeight: 500 }}>Please provide below details</Text>
                             </View>
 
 
                         </View>
                         <View style={{ margin: 15 }}>
                             <TextInput
-                                label="Email"
-                                value={"text"}
-                                mode='outlined'
-                                onChangeText={text => setText(text)}
+                                mode='flat'
+                                outlineColor='#DADADA'
+                                activeOutlineColor='#EDDEBE'
+                                label={<Text style={{ fontSize: 18, fontWeight: 400 }}>Email</Text>}
+                                // placeholder='Enter City / Airport name'
+                                value={email}
+                                onChangeText={email => setEmail(email)}
+                                style={{
+                                    marginTop: 15,
+                                    color: 'white', backgroundColor: '#E6E6E6',
+                                    borderRadius: 5, width: '95%', height: 60, fontSize: 18, fontWeight: 700
+                                }}
+                                right={<TextInput.Icon icon="email" />}
                             />
 
                             <TextInput
-                                label="Mobile"
-                                value={"text"}
-                                mode='outlined'
-                                onChangeText={text => setText(text)}
+                                mode='flat'
+                                outlineColor='#DADADA'
+                                activeOutlineColor='#EDDEBE'
+                                label={<Text style={{ fontSize: 18, fontWeight: 400 }}>Mobile</Text>}
+                                // placeholder='Enter City / Airport name'
+                                value={mobile}
+                                onChangeText={mobile => setMobile(mobile)}
+                                style={{
+                                    marginTop: 15,
+                                    color: 'white', backgroundColor: '#E6E6E6',
+                                    borderRadius: 5, width: '95%', height: 60, fontSize: 18, fontWeight: 700
+                                }}
+                                right={<TextInput.Icon icon="card-account-phone" />}
                             />
                         </View>
 
