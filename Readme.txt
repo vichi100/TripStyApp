@@ -10,6 +10,8 @@ https://oblador.github.io/react-native-vector-icons/   react native vector icon 
 
 https://looka.com/blog/color-combinations/    color pallets
 
+https://aboutreact.com/react-native-segmented-control-tab/ segment controle
+
 
 ################# How to push new project in github ############
 

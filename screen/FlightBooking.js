@@ -7,9 +7,21 @@ import Entypo from '@expo/vector-icons/Entypo';
 
 
 
-const FlightBooking = () => {
+const FlightBooking = (props) => {
+    const { navigation } = props;
+
     return (
         <SafeAreaView style={{ flex: 1 }}>
+            <View style={{ height: 30, flexDirection: 'row', alignItems: 'center', margin: 10, }}>
+                <TouchableOpacity style={{}} onPress={() => { navigation.goBack(null) }}>
+
+                    <MaterialIcons name="arrow-back-ios" color={"balck"} size={26} />
+                </TouchableOpacity>
+                <View>
+                    <Text>New Delhi to Mumbai</Text>
+                    {/* <Text>10 Jan 2024 | 10:24 - 12:30</Text> */}
+                </View> 
+            </View>
             <ScrollView>
                 <View style={{ alignItems: 'center' }}>
                     <Image
@@ -24,7 +36,7 @@ const FlightBooking = () => {
                         <Entypo name="aircraft-take-off" size={35} color="#0BACDC" style={{ marginLeft: 10, marginRight: 10 }} />
                         <Text style={{ fontSize: 30, fontWeight: 600 }}>MUM</Text>
                     </View>
-                    <Text style={{ fontSize: 14, marginTop: 5 }}>4 Jan 2024 | Sunday</Text>
+                    <Text style={{ fontSize: 14, marginTop: 5 }}>4 Jan 2024 | Sunday | 10:30-12:30</Text>
                 </View>
 
 
@@ -57,7 +69,7 @@ const FlightBooking = () => {
                             <Text style={{ marginLeft: 75 }}>Chargeable</Text>
                         </View>
                         <View style={{ alignItems: 'flex-end', }}>
-                            <Button icon="airplane" mode="contained" buttonColor="#EE5337" onPress={() => console.log('Pressed')}>
+                            <Button icon="airplane" mode="contained" buttonColor="#EE5337" onPress={() => navigation.navigate("FlightReview")}>
                                 Book
                             </Button>
                         </View>
@@ -136,6 +148,7 @@ const FlightBooking = () => {
                 </Card>
             </ScrollView>
         </SafeAreaView>
+
     )
 }
 
