@@ -12,18 +12,17 @@ const FlightBooking = (props) => {
 
     return (
         <SafeAreaView style={{ flex: 1 }}>
-            <View style={{ height: 30, flexDirection: 'row', alignItems: 'center', margin: 10, }}>
+            <View style={{ height: 120, flexDirection: 'row', margin: 10, }}>
                 <TouchableOpacity style={{}} onPress={() => { navigation.goBack(null) }}>
 
                     <MaterialIcons name="arrow-back-ios" color={"balck"} size={26} />
                 </TouchableOpacity>
-                <View>
+                {/* <View>
                     <Text>New Delhi to Mumbai</Text>
-                    {/* <Text>10 Jan 2024 | 10:24 - 12:30</Text> */}
-                </View> 
-            </View>
-            <ScrollView>
-                <View style={{ alignItems: 'center' }}>
+                    <Text>10 Jan 2024 | 10:24 - 12:30</Text>
+                </View>  */}
+
+                <View style={{ flex:1, alignItems: 'center', }}>
                     <Image
                         style={styles.tinyLogo}
                         source={{
@@ -38,6 +37,9 @@ const FlightBooking = (props) => {
                     </View>
                     <Text style={{ fontSize: 14, marginTop: 5 }}>4 Jan 2024 | Sunday | 10:30-12:30</Text>
                 </View>
+            </View>
+            <ScrollView>
+
 
 
 

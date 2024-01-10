@@ -11,6 +11,8 @@ const HomeScreen = (props) => {
     return (
         <SafeAreaView style={{ flex: 1, marginTop: StatusBar.currentHeight }}>
 
+            
+
             <View style={{ height: 30, flexDirection: 'row', alignItems: 'center', margin: 10, justifyContent:'center' }}>
                 <TouchableOpacity style={{}} onPress={() => { navigation.goBack(null) }}>
 
@@ -25,16 +27,17 @@ const HomeScreen = (props) => {
                 <Pressable style={[styles.button, { backgroundColor: '#00D0FF' }]} onPress={() => { navigation.navigate("FlightSearch") }}>
                     <MaterialIcons name="flight" size={30} color="black" />
                 </Pressable>
-                <Pressable style={[styles.button, { backgroundColor: '#0DCB58' }]} onPress={onPress}>
+                <Pressable style={[styles.button, { backgroundColor: '#0DCB58' }]} onPress={() => { navigation.navigate("HotelsSearch") }}>
                     <MaterialIcons name="hotel" size={30} color="black" />
                 </Pressable>
+                
                 <Pressable style={[styles.button, { backgroundColor: '#E69C07' }]} onPress={onPress}>
                     <MaterialIcons name="explore" size={30} color="black" />
                 </Pressable>
             </View>
 
             <View>
-                <Text>Your Recent Searches</Text>
+                {/* <Text>Your Recent Searches</Text> */}
             </View>
         </SafeAreaView>
     );

@@ -8,6 +8,11 @@ import FlightSearchResultCard from '../screen/FlightSearchResultCard';
 import FlightBooking from '../screen/FlightBooking';
 import FlightReview from '../screen/FlightReview';
 
+import HotelsSearch from '../screen/hotel/HotelsSearch';
+import HotelSearchResults from '../screen/hotel/HotelSearchResults';
+import HotelDetails from '../screen/hotel/HotelDetails';
+
+
 const Stack = createStackNavigator();
 
 const HomeStackScreen = () => {
@@ -66,6 +71,25 @@ const HomeStackScreen = () => {
             />
 
 
+            {/* // Hotels Search screens */}
+
+            <Stack.Screen
+                name="HotelsSearch"
+                component={HotelsSearch}
+                options={{ title: "Hotels Search" }}
+            />
+
+            <Stack.Screen
+                name="HotelSearchResults"
+                component={HotelSearchResults}
+                options={{ title: "Hotels Search Result" }}
+            />
+
+            <Stack.Screen
+                name="HotelDetails"
+                component={HotelDetails}
+                options={{ title: "Hotel Details" }}
+            />
 
 
         </Stack.Navigator>

@@ -12,6 +12,11 @@ https://looka.com/blog/color-combinations/    color pallets
 
 https://aboutreact.com/react-native-segmented-control-tab/ segment controle
 
+https://blog.logrocket.com/using-react-native-scrollview-create-sticky-header/   sticky Header
+https://snack.expo.dev/@ubahthebuilder/b179dc?platform=ios
+
+
+
 
 ################# How to push new project in github ############
 
